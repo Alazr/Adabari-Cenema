@@ -1,0 +1,6 @@
+{
+    "apiEndPoint":"https://api.themoviedb.org/3",
+    "originalImageUrl":"https://image.tmdb.org/t/p/original",
+    "normalImageUrl":"https://image.tmdb.org/t/p/w500"
+    
+}
