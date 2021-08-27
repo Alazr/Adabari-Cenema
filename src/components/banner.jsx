@@ -12,7 +12,7 @@ function Banner(props) {
 
     const {isLoading,popular} = useSelector(state=>state.movies)
     const prop= {
-        "background": `linear-gradient(to top,rgba(0,0,0,1),transparent),url(${!isLoading && getImage(popular[2].poster_path)})`,
+        "background": `linear-gradient(to top,rgba(0,0,0,1),transparent),url(${!isLoading && getImage(popular[2].poster_path,"b")})`,
         "backgroundRepeat" : "no-repeat",
         "backgroundPosition": "center"
         

@@ -1,6 +1,6 @@
 {
     "apiEndPoint":"https://api.themoviedb.org/3",
     "originalImageUrl":"https://image.tmdb.org/t/p/original",
-    "normalImageUrl":"https://image.tmdb.org/t/p/w500"
-    
+    "normalImageUrl":"https://image.tmdb.org/t/p/w200",   
+    "middleImageUrl":"https://image.tmdb.org/t/p/w500"
 }

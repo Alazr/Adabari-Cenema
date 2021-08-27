@@ -51,7 +51,7 @@ function MovieDetail(props) {
   
         <Detail variants={pageAnimation} exit="exit" initial="hidden" animate="show">
             <BackIcon onClick={handleBack}>
-            <img src={back} alt="back" />
+            <img src={back}  alt="back" />
             </BackIcon>
             <img className="mainPoster" src={getImage(movie.backdrop_path,"o")} alt="" />
             <Info>
@@ -199,7 +199,6 @@ const BackIcon = styled.div`
 
     img{
         width:60%;
-
     }
     @media screen and (max-width:760px){
         width:30px;

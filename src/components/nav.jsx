@@ -42,14 +42,14 @@ function Nav({type}) {
     //     if(!data)
     //     dispatch(searchedMovies(""))
     // },[])
-
+    
 
 
     return (
         <div className="headernav">
              <NavBar className={isRedBack ? "red-nav":""}>
             <div className="logo">
-                <h3><NavLink to="/">DEBARI</NavLink></h3>
+                <h3><NavLink to="/">ADABARI</NavLink></h3>
             </div>
             <form onSubmit={submitHandler}>
                 <SearchInput onChange={changeHandler} data={data}/>
@@ -119,7 +119,7 @@ const ListItems = styled.div`
     }
     li{
         position: relative;
-        padding-bottom: 3px;
+        padding-bottom: 5px;
         &.active::after{
             width:100%
         }

@@ -1,13 +1,15 @@
+import {lazy,Suspense} from 'react';
 import GlobalStyles from './shared/GlobalStyles'
-import Home from './components/Home'
-import {Redirect, Route,Switch,useLocation} from 'react-router-dom'
-import MovieDetail from './components/MovieDetail'
-import Discover from './components/Discover'
-import "./app.css"
-import Movies from './components/moviesComponent'
-import TvComponent from './components/tvComponent'
+import {Redirect, Route,Switch,useLocation} from 'react-router-dom' 
 import NotFound from './components/NotFound'
 import {AnimatePresence} from 'framer-motion'
+import Loader from './shared/Loader';
+
+const Home = lazy(()=>import('./components/Home'))
+const MovieDetail = lazy(()=>import('./components/MovieDetail'))
+const Movies = lazy(()=>import('./components/moviesComponent'))
+const TvComponent = lazy(()=>import('./components/tvComponent'))
+const Discover = lazy(()=>import('./components/Discover'))
 
 function App() {
   const loc = useLocation()
@@ -15,7 +17,7 @@ function App() {
     <div className="App">
       <GlobalStyles/>
       <AnimatePresence exitBeforeEnter>
-
+        <Suspense fallback={<Loader/>}>
       <Switch key={loc.pathname} location={loc}>
     <Redirect from="/movie/movie/:id" to="/movie/:id"/>
     <Route path="/movie/:id">
@@ -42,6 +44,7 @@ function App() {
     </Route>
     <Redirect to="/notfound"/>    
       </Switch>
+      </Suspense>
       </AnimatePresence>
     </div>
   );

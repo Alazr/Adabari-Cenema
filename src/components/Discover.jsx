@@ -35,7 +35,7 @@ function Discover(props) {
                 isLoading ? <Loader/> :
                 (
                     <>
-                    {/* <Nav type="redback"/> */}
+                    <Nav type="redback"/>
                     <MoviesGrid title="Discover" data={discover}/>
                     </>
                 )

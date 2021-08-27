@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,lazy,Suspense} from 'react';
 import Movie from './Movie'
 import Banner from './banner';
 import MoviesList from './MoviesList'

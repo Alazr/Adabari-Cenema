@@ -26,14 +26,14 @@ function MoviesList({title,data,isLoading,type}) {
     }
      
     return (
-        <MoviesRow variants={pageAnimation} exit="exit" initial="hidden" animate="show">
+        <MoviesRow variants={pageAnimation} exit="exit" initial="hidden" animate="show" >
             <h2>{title}</h2>
             <hr />
             {isLoading ? <Loader/> :
                (<>
                 <MovieList>
                    <div className="arrows prev" onClick={()=>carRef.current.slidePrev()}>
-                   <img src={back} alt="back" />
+                   <img className="prev-icon" src={back} alt="back" />
                    </div>
                     <Carousel ref={carRef} breakPoints={breakPoints} pagination={false} showArrows={false}> 
                         
@@ -45,7 +45,7 @@ function MoviesList({title,data,isLoading,type}) {
                     }
                     </Carousel>
                     <div className="arrows next" onClick={()=>carRef.current.slideNext()}>
-                   <img src={back} alt="back" />
+                   <img className="next-icon" src={back} alt="next" />
                    </div>
             </MovieList>
 
@@ -61,6 +61,9 @@ const MovieList = styled.div`
     overflow: auto;
     margin-top: 3rem;
 
+    .next-icon,.prev-icon{
+        width:60%;
+    }
 `
 
 const MoviesRow = styled(motion.div)`
